@@ -9,3 +9,12 @@ body {
   font-weight:400;
   margin:0
 }
+
+.script-container {
+  width: 25%; /* Set the width to 25% of the parent container */
+  margin: auto; /* Center the container horizontally */
+  padding: 10px; /* Add padding inside the container */
+  border: 1px solid #ccc; /* Optional: Add a border for visibility */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for styling */
+  text-align: center; /* Optional: Center-align content inside */
+}
