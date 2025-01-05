@@ -77,6 +77,10 @@
 
 @media print, screen and (max-width: 1000px) { 
 
+  .topnav img {
+    display: none;
+  }
+
   .topnav a.right {
       margin-right:5%;
     }
