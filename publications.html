@@ -744,17 +744,28 @@ xm-select[size='mini'] .item--divided {
 .layui-form-pane xm-select {
   margin: -1px -1px -1px 0;
 }
-</style></head>
+</style>
+<!-- <script>
+  function toggleMenu() {
+    var links = document.getElementById("myLinks");
+    if (links.style.display === "block") {
+      links.style.display = "none";
+    } else {
+      links.style.display = "block";
+    }
+  }
+</script> -->
+</head>
   <body data-new-gr-c-s-check-loaded="14.1204.0" data-gr-ext-installed="">
     
     <div class="topnav">
-
-      <a href="https://www.rmit.edu.au/"><img width="90" src="./homepage_files/RMIT-white.png"></a>
-
+      <a href="https://www.rmit.edu.au/">
+        <img width="90" src="./homepage_files/RMIT-white.png" alt="RMIT Logo">
+      </a>
+      <!-- <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a> -->
       <div id="myLinks">
         <a class="normal right" href="./teaching.html">Teaching</a>
         <a class="normal" href="./services.html">Services</a>
-        <!-- <a class="normal" href="./talks.html">Talks</a> -->
         <a class="normal" href="./publications.html">Publications</a>
         <a class="normal" href="./index.html">Home</a>
       </div>
