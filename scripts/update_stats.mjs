@@ -26,11 +26,11 @@ async function run(){
 
         dateRanges:[
             {
-                // startDate:"365daysAgo",
-                // endDate:"today"
+                startDate:"365daysAgo",
+                endDate:"today"
                 
-                startDate:"2026-07-01",
-                endDate:"2026-07-11"
+                // startDate:"2026-07-01",
+                // endDate:"2026-07-11"
             }
         ]
     });
