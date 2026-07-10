@@ -65,24 +65,22 @@ async function run(){
     const pageviews =
         Number(userReport.rows[0].metricValues[1].value);
 
-    const countries =
-        countryReport.rows.map(r=>({
+    const countries = countryReport.rows.map(r => ({
+        name: r.dimensionValues[0].value,
+        value: Number(r.metricValues[0].value)
+    }));
 
-            country:r.dimensionValues[0].value,
-
-            count:Number(r.metricValues[0].value)
-
-        }));
-
-    const output={
+    const output = {
 
         visitors,
 
         pageviews,
 
+        countryCount: countries.length,
+
         countries,
 
-        updated:new Date().toISOString().substring(0,10)
+        updated: new Date().toISOString().substring(0,10)
 
     };
 
