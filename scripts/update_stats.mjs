@@ -32,6 +32,10 @@ async function run(){
         ]
     });
 
+    console.log(
+        JSON.stringify(userReport,null,2)
+    );
+
     //------------------------
     // countries
     //------------------------
@@ -59,13 +63,20 @@ async function run(){
 
     });
 
-    const visitors =
-        Number(userReport.rows[0].metricValues[0].value);
+    let visitors = 0;
+    let pageviews = 0;
 
-    const pageviews =
-        Number(userReport.rows[0].metricValues[1].value);
+    if (userReport.rows && userReport.rows.length > 0) {
 
-    const countries = countryReport.rows.map(r => ({
+        visitors =
+            Number(userReport.rows[0].metricValues[0].value);
+
+        pageviews =
+            Number(userReport.rows[0].metricValues[1].value);
+
+    }
+
+    const countries = (countryReport.rows || []).map(r => ({
         name: r.dimensionValues[0].value,
         value: Number(r.metricValues[0].value)
     }));
