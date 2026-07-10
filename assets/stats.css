@@ -1,0 +1,19 @@
+.stats-card{
+
+margin-top:40px;
+
+padding:20px;
+
+border-radius:12px;
+
+background:#fafafa;
+
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.stats-card ul{
+
+padding-left:18px;
+
+}

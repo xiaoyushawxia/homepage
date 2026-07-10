@@ -1,0 +1,7 @@
+{
+  "name": "homepage-statistics",
+  "type": "module",
+  "dependencies": {
+    "@google-analytics/data": "^4.10.0"
+  }
+}
