@@ -67,15 +67,15 @@ async function run(){
     });
 
     let visitors = 0;
-    let pageviews = 0;
+    // let pageviews = 0;
 
     if (userReport.rows && userReport.rows.length > 0) {
 
         visitors =
             Number(userReport.rows[0].metricValues[0].value);
 
-        pageviews =
-            Number(userReport.rows[0].metricValues[1].value);
+        // pageviews =
+        //     Number(userReport.rows[0].metricValues[1].value);
 
     }
 
@@ -88,13 +88,13 @@ async function run(){
 
         visitors,
 
-        pageviews,
+        // pageviews,
 
-        countryCount: countries.length,
+        // countryCount: countries.length,
 
         countries,
 
-        updated: new Date().toISOString().substring(0,10)
+        // updated: new Date().toISOString().substring(0,10)
 
     };
 

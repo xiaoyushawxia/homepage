@@ -5,14 +5,14 @@ fetch("stats.json")
     document.getElementById("visitor").textContent =
         data.visitors.toLocaleString();
 
-    document.getElementById("pageview").textContent =
-        data.pageviews.toLocaleString();
+    // document.getElementById("pageview").textContent =
+    //     data.pageviews.toLocaleString();
 
-    document.getElementById("countryCount").textContent =
-        data.countryCount;
+    // document.getElementById("countryCount").textContent =
+    //     data.countryCount;
 
-    document.getElementById("updated").textContent =
-        "Updated: " + data.updated;
+    // document.getElementById("updated").textContent =
+    //     "Updated: " + data.updated;
 
     // ---------- Top Countries ----------
 
