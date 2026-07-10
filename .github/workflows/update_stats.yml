@@ -1,0 +1,53 @@
+name: Update Homepage Statistics
+
+on:
+
+  workflow_dispatch:
+
+  schedule:
+
+    - cron: '0 0 * * *'
+
+jobs:
+
+  update:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+
+        with:
+
+          node-version: 22
+
+      - run: npm install
+
+        working-directory: scripts
+
+      - run: node update_stats.mjs
+
+        working-directory: scripts
+
+        env:
+
+          GA_CREDENTIALS: ${{ secrets.GA_CREDENTIALS }}
+
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+
+      - run: |
+
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          git add stats.json
+
+          git commit -m "Update statistics" || exit 0
+
+          git push
