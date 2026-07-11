@@ -1,20 +1,9 @@
 fetch("stats.json")
 .then(r => r.json())
-.then(data => {
+.then(async data => {
 
     document.getElementById("visitor").textContent =
         data.visitors.toLocaleString();
-
-    // document.getElementById("pageview").textContent =
-    //     data.pageviews.toLocaleString();
-
-    // document.getElementById("countryCount").textContent =
-    //     data.countryCount;
-
-    // document.getElementById("updated").textContent =
-    //     "Updated: " + data.updated;
-
-    // ---------- Top Countries ----------
 
     const list = document.getElementById("countryList");
 
@@ -27,8 +16,7 @@ fetch("stats.json")
 
             div.className="country";
 
-            div.innerHTML=
-
+            div.innerHTML =
                 `<span>${c.name}</span>
                  <span>${c.value.toLocaleString()}</span>`;
 
@@ -36,7 +24,12 @@ fetch("stats.json")
 
         });
 
-    // ---------- World Map ----------
+    // Load world GeoJSON
+    const world = await fetch(
+        "https://fastly.jsdelivr.net/npm/echarts@5/map/json/world.json"
+    ).then(r => r.json());
+
+    echarts.registerMap("world", world);
 
     const chart = echarts.init(
         document.getElementById("worldMap")
@@ -51,10 +44,10 @@ fetch("stats.json")
         visualMap:{
             min:0,
             max:Math.max(...data.countries.map(c=>c.value)),
-            left:"left",
-            bottom:"10%",
             text:["High","Low"],
-            calculable:true
+            calculable:true,
+            left:"left",
+            bottom:20
         },
 
         series:[{
@@ -64,6 +57,12 @@ fetch("stats.json")
             map:"world",
 
             roam:true,
+
+            emphasis:{
+                label:{
+                    show:false
+                }
+            },
 
             data:data.countries
 
