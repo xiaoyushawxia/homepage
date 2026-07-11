@@ -1,7 +1,9 @@
 {
-  "visitors": 0,
-  "pageviews": 0,
-  "countryCount": 0,
-  "countries": [],
-  "updated": "2026-07-10"
+  "visitors": 1,
+  "countries": [
+    {
+      "name": "Australia",
+      "value": 1
+    }
+  ]
 }
