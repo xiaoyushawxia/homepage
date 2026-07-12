@@ -1,8 +1,12 @@
 {
-  "visitors": 1,
+  "visitors": 4,
   "countries": [
     {
       "name": "Australia",
+      "value": 3
+    },
+    {
+      "name": "Singapore",
       "value": 1
     }
   ]
