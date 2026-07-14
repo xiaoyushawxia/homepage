@@ -1,16 +1,20 @@
 {
-  "visitors": 10,
+  "visitors": 17,
   "countries": [
     {
       "name": "Australia",
-      "value": 6
-    },
-    {
-      "name": "Bangladesh",
-      "value": 1
+      "value": 10
     },
     {
       "name": "China",
+      "value": 3
+    },
+    {
+      "name": "United States",
+      "value": 2
+    },
+    {
+      "name": "Bangladesh",
       "value": 1
     },
     {
