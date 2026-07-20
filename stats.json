@@ -1,12 +1,16 @@
 {
-  "visitors": 43,
+  "visitors": 49,
   "countries": [
     {
       "name": "Australia",
-      "value": 24
+      "value": 25
     },
     {
       "name": "China",
+      "value": 7
+    },
+    {
+      "name": "United States",
       "value": 5
     },
     {
@@ -18,11 +22,11 @@
       "value": 3
     },
     {
-      "name": "United States",
-      "value": 3
+      "name": "Hong Kong",
+      "value": 2
     },
     {
-      "name": "Hong Kong",
+      "name": "Malaysia",
       "value": 2
     },
     {
@@ -35,10 +39,6 @@
     },
     {
       "name": "India",
-      "value": 1
-    },
-    {
-      "name": "Malaysia",
       "value": 1
     }
   ]
