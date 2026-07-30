@@ -1,9 +1,9 @@
 {
-  "visitors": 76,
+  "visitors": 85,
   "countries": [
     {
       "name": "Australia",
-      "value": 38
+      "value": 42
     },
     {
       "name": "China",
@@ -11,11 +11,11 @@
     },
     {
       "name": "United States",
-      "value": 7
+      "value": 8
     },
     {
       "name": "Hong Kong",
-      "value": 5
+      "value": 6
     },
     {
       "name": "Singapore",
@@ -27,7 +27,11 @@
     },
     {
       "name": "Malaysia",
-      "value": 2
+      "value": 3
+    },
+    {
+      "name": "Argentina",
+      "value": 1
     },
     {
       "name": "Bangladesh",
@@ -35,10 +39,6 @@
     },
     {
       "name": "Cyprus",
-      "value": 1
-    },
-    {
-      "name": "France",
       "value": 1
     }
   ]
