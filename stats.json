@@ -1,5 +1,5 @@
 {
-  "visitors": 93,
+  "visitors": 94,
   "countries": [
     {
       "name": "Australia",
@@ -38,8 +38,8 @@
       "value": 2
     },
     {
-      "name": "Argentina",
-      "value": 1
+      "name": "Pakistan",
+      "value": 2
     }
   ]
 }
