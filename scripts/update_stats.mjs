@@ -62,7 +62,9 @@ async function run(){
             }
         ],
 
-        limit:10
+        // Every country with traffic: the map plots all of them,
+        // while the page renders only the top ten as a ranking.
+        limit:250
 
     });
 
@@ -79,10 +81,12 @@ async function run(){
 
     }
 
-    const countries = (countryReport.rows || []).map(r => ({
-        name: r.dimensionValues[0].value,
-        value: Number(r.metricValues[0].value)
-    }));
+    const countries = (countryReport.rows || [])
+        .map(r => ({
+            name: r.dimensionValues[0].value,
+            value: Number(r.metricValues[0].value)
+        }))
+        .filter(c => c.name && c.name !== "(not set)" && c.value > 0);
 
     const output = {
 

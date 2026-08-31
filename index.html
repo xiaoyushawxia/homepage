@@ -1,273 +1,225 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-AU">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Xiaoyu Xia's Homepage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.0/css/academicons.min.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Xiaoyu Xia is a Senior Lecturer at School of Computing Technologies, Royal Melbourne Institute of Technology (RMIT).">
-    <meta name="keywords" content="Xiaoyu Xia, Xia Xiaoyu, Shaw Xia, Xia Shaw, Xiaoyu (Shaw) Xia">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/jpeg" href="./homepage_files/RMIT_coa.png">
-    <link rel="stylesheet" href="./homepage_files/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="./homepage_files/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
-    <link rel="stylesheet" href="./homepage_files/font.css">
-    <link rel="stylesheet" href="./homepage_files/style.css">
-    <link rel="stylesheet" href="./homepage_files/publications.css">
-    <link rel="stylesheet" href="./homepage_files/nav.css">
+  <title>Xiaoyu (Shaw) Xia</title>
+  <meta name="description" content="Xiaoyu Xia is a Senior Lecturer at the School of Computing Technologies, RMIT University, working on system security and privacy, distributed systems, and edge computing.">
+  <meta name="keywords" content="Xiaoyu Xia, Xia Xiaoyu, Shaw Xia, Xia Shaw, Xiaoyu (Shaw) Xia, RMIT University, edge computing, system security and privacy">
+  <meta name="author" content="Xiaoyu Xia">
 
-    <style>
-      /* Toggle button for older news */
-      .news-toggle {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        margin: -2px 0 18px;
-        padding: 6px 16px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #2e7d32;
-        background: rgba(46, 125, 50, 0.08);
-        border: 1px solid rgba(46, 125, 50, 0.35);
-        border-radius: 20px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-      .news-toggle:hover {
-        color: #fff;
-        background: #2e7d32;
-        border-color: #2e7d32;
-      }
-      .news-toggle .chevron {
-        transition: transform 0.2s ease;
-        font-size: 0.75rem;
-      }
-      .news-toggle.expanded .chevron { transform: rotate(180deg); }
-      #news-extra { display: none; padding-left: 0; }
-      #news-extra.show { display: block; }
-    </style>
+  <link rel="canonical" href="https://xiaoyushawxia.github.io/homepage/">
+  <link rel="icon" type="image/png" href="./homepage_files/RMIT_coa.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Ubuntu+Mono&amp;display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/site.css">
+
+  <script>
+    /* Applies a saved theme before first paint so there is no flash of the wrong palette. */
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (err) { /* storage blocked — fall back to the system preference */ }
+    })();
+  </script>
 </head>
 
-  <body>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <div class="topnav">
-
-      <a href="https://www.rmit.edu.au/"><img width="90" src="./homepage_files/RMIT-white.png"></a>
-
-      <div id="myLinks">
-        <a class="normal right" href="./teaching.html">Teaching</a>
-        <a class="normal" href="./services.html">Services</a>
-        <a class="normal" href="./publications.html">Publications</a>
-        <a class="normal" href="./index.html">Home</a>
+  <nav class="topnav" aria-label="Main">
+    <div class="topnav__inner">
+      <a class="topnav__brand" href="https://www.rmit.edu.au/" rel="noopener">
+        <img src="./homepage_files/RMIT-white.png" alt="RMIT University">
+      </a>
+      <div class="topnav__links">
+        <a href="./index.html" aria-current="page">Home</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./services.html">Services</a>
+        <a href="./teaching.html">Teaching</a>
+        <button type="button" class="theme-toggle" id="themeToggle" hidden
+                aria-label="Switch colour theme" title="Switch colour theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2.6v2.2M12 19.2v2.2M4.2 12H2M22 12h-2.2M6.3 6.3 4.8 4.8M19.2 19.2l-1.5-1.5M17.7 6.3l1.5-1.5M4.8 19.2l1.5-1.5"/>
+          </svg>
+        </button>
       </div>
     </div>
+  </nav>
 
-    <div class="wrapper">
-      <header>
+  <div class="wrapper">
 
-        <a class="image avatar"><img src="./homepage_files/xiaoyu_xia_square.jpeg" alt="avatar"></a>
+    <aside class="profile">
+      <span class="profile__avatar">
+        <img src="./homepage_files/xiaoyu_xia_square.jpeg" alt="Portrait of Xiaoyu Xia" width="150" height="150">
+      </span>
 
-        <h1>Xiaoyu (Shaw) Xia</h1>
+      <h1 class="profile__name">Xiaoyu (Shaw) Xia</h1>
+      <p class="profile__role">Senior Lecturer</p>
 
-        <position style="font-size:1.10rem;">Senior Lecturer</position>
-        <br>
+      <p class="profile__affiliation">
+        School of Computing Technologies,<br>
+        <a href="https://www.rmit.edu.au/" rel="noopener">RMIT University</a>
+      </p>
 
-        <a><autocolor>School of Computing Technologies,</autocolor></a>
-        <a href="https://www.rmit.edu.au/" rel="noopener"><autocolor>RMIT University</autocolor></a>
-        <br>
+      <p class="profile__email">
+        <a href="mailto:xiaoyu.xia@rmit.edu.au">xiaoyu.xia[at]rmit.edu.au</a>
+      </p>
 
-        <a href="mailto:xiaoyu.xia@rmit.edu.au"><autocolor>
-          <email>
-            xiaoyu.xia[at]rmit.edu.au
-          </email></autocolor>
+      <div class="social-icons">
+        <a href="https://scholar.google.com.au/citations?hl=en&amp;user=v-6hODoAAAAJ" rel="noopener" aria-label="Google Scholar">
+          <i class="fab fa-google-scholar" aria-hidden="true"></i>
         </a>
-
-        <br>
-        <br>
-        <div class="social-icons">
-
-        <a style="margin: 0 5px 0 0" href="https://scholar.google.com.au/citations?hl=en&user=v-6hODoAAAAJ">
-          <i class="fab fa-google-scholar" style="font-size:1.2rem"></i>
+        <a href="https://www.linkedin.com/in/xiaoyu-shaw-xia-9a0b56bb/" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
-
-        <a style="margin: 0 5px 0 0" href="https://www.linkedin.com/in/xiaoyu-shaw-xia-9a0b56bb/">
-          <i class="fab fa-linkedin"></i>
+        <a href="https://x.com/xiaoyu_shaw_xia" rel="noopener" aria-label="X (Twitter)">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
+      </div>
+    </aside>
 
-        <a style="margin: 0 0 0 0" href="https://x.com/xiaoyu_shaw_xia">
-          <i class="fab fa-twitter"></i>
-        </a>
+    <main class="content" id="main">
 
+      <p class="lead">
+        I am a Senior Lecturer (equivalent to Associate Professor in North America) in Cyber Security
+        &amp; Software Systems with the School of Computing Technologies at
+        <a href="https://www.rmit.edu.au/" rel="noopener">RMIT University</a>. My current research
+        interests include <strong>System Privacy and Security</strong>,
+        <strong>Distributed Systems</strong>, <strong>Edge and Cloud Computing</strong>, and
+        <strong>Sustainable Computing</strong>. I am a Senior Member of IEEE and a Member of ACM.
+        I also serve as an Associate Editor for IEEE Transactions on Dependable and Secure Computing
+        (TDSC), IEEE Transactions on Mobile Computing (TMC) and IEEE Transactions on Services
+        Computing (TSC), as well as a Review Board Member of IEEE Transactions on Parallel and
+        Distributed Systems (TPDS).
+      </p>
+
+      <div class="callout">
+        <p>
+          <strong>I am actively looking for self-motivated Ph.D. students</strong> with interests in
+          system security and privacy, and distributed ML systems. If you are interested, please send
+          me an email with your <strong class="alert">CV, transcript and research experience</strong>
+          (e.g. minor thesis, publications) at any time.
+          <strong class="venue">Visiting scholars and students</strong> as well as
+          <strong class="venue">industry partners</strong> are welcome.
+        </p>
+      </div>
+
+      <h2 class="section-title" id="news">News</h2>
+
+      <ul class="news-list">
+        <li><span class="date">[Jul. 2026]</span> Ziqi Wang and Jian Tang have been funded by the <span class="venue">AWS RMAS</span> program. Congrats, <span class="person">Ziqi</span> and <span class="person">Jian</span>!</li>
+        <li><span class="date">[Jun. 2026]</span> I am invited to serve as a PC member for <span class="venue">USENIX Security&rsquo;27</span>.</li>
+        <li><span class="date">[Jun. 2026]</span> Our paper MERA has been accepted by <span class="venue">TKDE&rsquo;26</span>. Congrats, <span class="person">Ziqi</span>!</li>
+        <li><span class="date">[Jun. 2026]</span> I am invited to serve as an Artifact Evaluation Committee member for <span class="venue">NDSS&rsquo;27</span>.</li>
+        <li><span class="date">[Apr. 2026]</span> Our paper WinFLoRA has been accepted as an oral paper by <span class="venue">WWW&rsquo;26</span>. Congrats, <span class="person">Mengsha</span>!</li>
+        <li><span class="date">[Feb. 2026]</span> Our paper DFA has been accepted by <span class="venue">TIFS</span>. Congrats, <span class="person">Mengsha</span>!</li>
+        <li><span class="date">[Dec. 2025]</span> I am invited to serve as a publicity chair for <span class="venue">IEEE Service Congress&rsquo;26</span>.</li>
+        <li><span class="date">[Nov. 2025]</span> Our paper KGEES has been accepted by <span class="venue">TDSC</span>. Congrats, <span class="person">Ziqi</span>!</li>
+        <li><span class="date">[Nov. 2025]</span> I am invited to serve as a committee member of the ISOC Fellowship Review Committee for <span class="venue">NDSS&rsquo;26</span>.</li>
+        <li><span class="date">[Nov. 2025]</span> Our paper MoSEEC has been accepted by <span class="venue">TMC</span>. Congrats, <span class="person">Ziqi</span>!</li>
+        <li><span class="date">[Nov. 2025]</span> I have received the <span class="venue">RMIT Early Career Researcher Award for Research Excellence</span>!</li>
+      </ul>
+
+      <div id="news-extra">
+        <ul class="news-list">
+          <li><span class="date">[Sep. 2025]</span> I am invited to serve as a PC member for <span class="venue">WWW&rsquo;26</span>.</li>
+          <li><span class="date">[Sep. 2025]</span> I am again named in the <span class="venue">World&rsquo;s Top 2% Scientists</span> list for Distributed Computing.</li>
+          <li><span class="date">[Sep. 2025]</span> Our TPDS&rsquo;23 paper CHEESE was selected for the <span class="venue">IEEE Communications Society Best Readings</span> in Privacy Preservation for Machine Learning!</li>
+          <li><span class="date">[Aug. 2025]</span> I am invited to serve as a PC member for <span class="venue">PoPETS/PETS&rsquo;26</span>.</li>
+          <li><span class="date">[Jul. 2025]</span> Our paper has been accepted by <span class="venue">RAID&rsquo;25</span>. Congrats, <span class="person">Jiachen</span>!</li>
+          <li><span class="date">[May 2025]</span> I am invited to serve as a PC member for <span class="venue">RAID&rsquo;25</span>.</li>
+          <li><span class="date">[Dec. 2024]</span> Our <strong>Discovery Project</strong> has been approved by the <span class="venue">Australian Research Council</span>!</li>
+          <li><span class="date">[Sep. 2024]</span> I am again named in the <span class="venue">World&rsquo;s Top 2% Scientists</span> list for Distributed Computing.</li>
+          <li><span class="date">[Sep. 2024]</span> Our paper has been accepted by <span class="venue">IEEE Symposium on Security and Privacy (Oakland)&rsquo;25</span>.</li>
+          <li><span class="date">[Aug. 2024]</span> I am invited to serve as a PC member for <span class="venue">ACM The Web Conference (WWW)&rsquo;25</span>.</li>
+          <li><span class="date">[Aug. 2024]</span> Our paper has been accepted by <span class="venue">IEEE Transactions on Mobile Computing (TMC)</span>.</li>
+          <li><span class="date">[Feb. 2024]</span> Our paper has been accepted as an oral paper by <span class="venue">ACM The Web Conference (WWW)&rsquo;24</span>. Congrats, <span class="person">Ziqi</span>!</li>
+        </ul>
+      </div>
+
+      <button type="button" id="newsToggle" class="news-toggle" aria-expanded="false" aria-controls="news-extra">
+        <span id="newsToggleText">View earlier news</span>
+        <span class="chevron" aria-hidden="true">&#9660;</span>
+      </button>
+
+      <h2 class="section-title" id="awards">Awards</h2>
+
+      <ul class="stack-list">
+        <li><strong>RMIT Early Career Researcher Award for Research Excellence</strong>, RMIT, 2025</li>
+        <li><strong>World&rsquo;s Top 2% Scientists</strong>, Stanford/Elsevier, 2022&ndash;now</li>
+        <li><strong>Alfred Deakin Medal</strong>, Deakin University, 2021</li>
+        <li><strong>Teaching Excellence Award</strong>, Swinburne University of Technology, 2021</li>
+        <li><strong>Postgraduate Research Award</strong>, Deakin University, 2021</li>
+        <li><strong>Postgraduate Research Scholarship</strong>, Deakin University, 2018&ndash;21</li>
+      </ul>
+
+      <h2 class="section-title" id="fundings">Funded Projects</h2>
+
+      <ul class="stack-list">
+        <li><strong>Chief Investigator</strong> &middot; Privacy-aware intelligent digital twin for secure critical infrastructures. ARC Discovery Project (DP250100582, $506,636.00), Australia, 2025&ndash;27.</li>
+        <li><strong>Partnership Investigator</strong> &middot; Empowering Vietnamese shrimp farming with AIoT for climate-resilient disease management. Vietnam Thematic Research Grant (VND 452,154,470.00), 2026&ndash;27.</li>
+        <li><strong>Chief Investigator</strong> &middot; Med-Safe App. RMIT Blue Sky Scheme ($20,000), 2025.</li>
+        <li><strong>Lead Chief Investigator</strong> &middot; Optimizing collaborative learning at the constrained edge with privacy awareness. CSIRO&ndash;RMIT Research Masters Project, Australia, 2024&ndash;25.</li>
+        <li><strong>Lead Chief Investigator</strong> &middot; Enabling machine unlearning on resource-constrained devices. CCSRI SEED Funding, RMIT Centre for Cyber Security Research and Innovation, Australia, 2024.</li>
+        <li><strong>Chief Investigator</strong> &middot; Empowering female cybersecurity leaders: bridging the gender gap in cybersecurity education (0000000051). Advance HE Global Impact Grants, United Kingdom, 2023&ndash;24.</li>
+        <li><strong>Lead Chief Investigator</strong> &middot; Cost-effective and secure data management in edge computing. University of Southern Queensland, Australia, 2022.</li>
+      </ul>
+
+      <section class="visitor-map" id="visitorMap" aria-labelledby="visitors" hidden>
+        <h2 class="section-title" id="visitors">Visitors</h2>
+
+        <div class="visitor-map__summary">
+          <p class="visitor-map__stat">
+            <span class="visitor-map__figure" data-visitor-total>&mdash;</span>
+            <span class="visitor-map__caption">visitors</span>
+          </p>
+          <p class="visitor-map__stat">
+            <span class="visitor-map__figure" data-visitor-countries>&mdash;</span>
+            <span class="visitor-map__caption">countries &amp; regions</span>
+          </p>
+          <p class="visitor-map__note">Past 12 months, via Google Analytics. Updated daily.</p>
         </div>
-        <br>
-        
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-73HCP89TG6"></script>
 
-        <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag(){
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-73HCP89TG6');
-        </script>
-
-      </header>
-      <section>
-
-<p>I am a Senior Lecturer (Equiv. to Associate Professor in North America) in Cyber Security & Software Systems with School of Computing Technologies at <a href="https://www.rmit.edu.au/">RMIT University</a>. My current research interests include <strong>System Privacy and Security</strong>, <strong>Distributed Systems</strong>, <strong>Edge and Cloud Computing</strong>, and <strong>Sustainable Computing</strong>. I am a senior member of IEEE and a member of ACM. I also serve as an Associate Editor for IEEE Transactions on Dependable and Secure Computing (TDSC), IEEE Transactions on Mobile Computing (TMC) and IEEE Transactions on Services Computing (TSC), as well as a Review Board Member of the IEEE Transactions on Parallel and Distributed Systems (TPDS).</p>
-
-<p>
-<strong >I am actively looking for self-motivated Ph.D. students with interests in system security and privacy, and distributed ML systems. If you are interested, please send me an email with your <strong style="color: orangered;">CV, transcript and research experience</strong> (e.g. minor thesis, publication, etc.) at any time. <strong style="color: green;">Visiting scholars and students</strong> as well as <strong style="color: green;">industry partners</strong> are welcomed.</strong>
-</p>
-
-<h2 id="news" style="width: 100%;"> News</h2>
-
-<ul>
-  <li><strong>[Jul. 2026]</strong> Ziqi Wang and Jian Tang have been funded by <span style="color: green;">AWS RMAS</span> program. Congrats, <span style="color: orchid;">Ziqi</span> and <span style="color: orchid;">Jian</span>! </li>
-  <li><strong>[Jun. 2026]</strong> I am invited to serve as the PC member for <span style="color: green;">USENIX Security'27.</span></li>
-  <li><strong>[Jun. 2026]</strong> Our paper MERA has been accepted by <span style="color: green;">TKDE'26</span>. Congrats, <span style="color: orchid;">Ziqi</span>! </li>
-  <li><strong>[Jun. 2026]</strong> I am invited to serve as an Artifact Evaluation Committee member for <span style="color: green;">NDSS'27</span>. </li>
-  <li><strong>[Apr./Jan. 2026]</strong> Our paper WinFLoRA has been accepted as an oral paper by <span style="color: green;">WWW'26</span>. Congrats, <span style="color: orchid;">Mengsha</span>! </li>
-  <li><strong>[Feb. 2026]</strong> Our paper DFA has been accepted by <span style="color: green;">TIFS</span>. Congrats, <span style="color: orchid;">Mengsha</span>! </li>
-  <li><strong>[Dec. 2025]</strong> I am invited to serve as a publicity chair for <span style="color: green;">IEEE Service Congress'26</span>. </li>
-  <li><strong>[Nov. 2025]</strong> Our paper KGEES has been accepted by <span style="color: green;">TDSC</span>. Congrats, <span style="color: orchid;">Ziqi</span>! </li>
-  <li><strong>[Nov. 2025]</strong> I am invited to serve as a committee member of ISOC Fellowship Review Committee for <span style="color: green;">NDSS'26</span>. </li>
-  <li><strong>[Nov. 2025]</strong> Our paper MoSEEC has been accepted by <span style="color: green;">TMC</span>. Congrats, <span style="color: orchid;">Ziqi</span>! </li>
-  <li><strong>[Nov. 2025]</strong> I have received the <span style="color: green;">RMIT Early Career Researcher Award for Research Excellence</span>! </li>
-</ul>
-
-<div id="news-extra">
-<ul>
-  <!-- <li><strong>[Feb. 2026]</strong> I am invited to serve as an Associate Editor for <span style="color: green;">IEEE Transactions on Mobile Computing</span>.</li> -->
-  <!-- <li><strong>[Jan. 2026]</strong> I have officially been promoted to <span style="color: orange;">Senior Lecturer</span></span>. </li> -->
-  <li><strong>[Sep. 2025]</strong> I am invited to serve as the PC member for <span style="color: green;">WWW'26</span>. </li>
-  <li><strong>[Sep. 2025]</strong> I am again named in the <span style="color: green;">World’s Top 2% Scientists</span> list for Distributed Computing. </li>
-  <li><strong>[Sep. 2025]</strong> Our TPDS'23 paper CHEESE was selected for the <span style="color: green;">IEEE Communications Society Best Readings</span> in Privacy Preservation for Machine Learning!</span></li>
-  <li><strong>[Aug. 2025]</strong> I am invited to serve as the PC member for <span style="color: green;">PoPETS/PETS'26.</span> </li>
-  <li><strong>[Jul. 2025]</strong> Our paper has been accepted by <span style="color: green;">RAID'25</span>. Congrats, <span style="color: orchid;">Jiachen</span>!</span> </li>
-  <li><strong>[May. 2025]</strong> I am invited to serve as the PC member for <span style="color: green;">RAID'25.</span> </li>
-  <!-- <li><strong>[Feb. 2025]</strong> I am invited to serve as an Associate Editor for <span style="color: green;">IEEE Transactions on Dependable and Secure Computing</span>.</li> -->
-  <li><strong>[Dec. 2024]</strong> Our <span style="color: orange;">Discovery Project</span> has been approved by the <span style="color: green;">Australian Research Council!</span> </li>
-  <li><strong>[Sep. 2024]</strong> I am again named in the <span style="color: green;">World’s Top 2% Scientists</span> list for Distributed Computing. </li>
-  <li><strong>[Sep. 2024]</strong> Our paper has been accepted by <span style="color: green;">IEEE Symposium on Security and Privacy (Oakland)'25</span>. </li>
-  <li><strong>[Aug. 2024]</strong> I am invited to serve as the PC member for <span style="color: green;">ACM The Web Conference (WWW)'25.</span> </li>
-  <li><strong>[Aug. 2024]</strong> Our paper has been accepted by <span style="color: green;">IEEE Transactions on Mobile Computing (TMC).</span> </li>
-  <li><strong>[Feb. 2024]</strong> Our paper has been accepted as an oral paper by <span style="color: green;">ACM The Web Conference (WWW)'24</span>. Congrats, <span style="color: orchid;">Ziqi</span>! </li>
-</ul>
-</div>
-
-<button id="newsToggle" class="news-toggle" onclick="toggleNews()" aria-expanded="false">
-  <span id="newsToggleText">View earlier news</span>
-  <span class="chevron">&#9660;</span>
-</button>
-
-<h2 id="awards" style="width: 100%;"> Awards</h2>
-
-<ul>
-  <li><strong>RMIT Early Career Researcher Award for Research Excellence</strong>, RMIT, 2025 </li>
-  <li><strong>World's Top 2% Scientists</strong>, Stanford/Elsevier, 2022-Now </li>
-  <li><strong>Alfred Deakin Medal</strong>, Deakin University, 2021 </li>
-  <li><strong>Teaching Excellence Award</strong>, Swinburne University of Technology, 2021 </li>
-  <li><strong>Postgraduate Research Award</strong>, Deakin University, 2021 </li>
-  <li><strong>Postgraduate Research Scholarship</strong>, Deakin University, 2018-21 </li>
-</ul>
-
-<h2 id="fundings" style="width: 100%;"> Funded Projects</h2>
-
-<ul>
-  <li>Chief Investigator, privacy-aware intelligent digital twin for secure critical infrastructures, ARC Discovery Project (DP250100582, $506,636.00), Australia, 2025-27.</li>
-  <li>Partnership Investigator, empowering Vietnames shrimp farming with AIoT for climate-resilient disease management, Vietnam Thematic Research Grant (VND 452,154,470.00), 2026-2027.</li>
-  <li>Chief Investigator, Med-Safe App, RMIT Blue Sky Scheme ($20,000), 2025.</li>
-  <li>Lead Chief Investigator, optimizing collaborative learning at the constrained edge with privacy awareness, CSIRO-RMIT Research Masters Project, Australia, 2024-25.</li>
-  <li>Lead Chief Investigator, enabling machine unlearning on resource-constrained devices, CCSRI SEED Funding, RMIT Centre for Cyber Security Research and Innovation, Australia, 2024.</li>
-  <li>Chief Investigator, empowering female Cybersecurity leaders: bridging the gender gap in Cybersecurity Education (0000000051), Advance HE Global Impact Grants, United Kingdom, 2023-24.</li>
-  <li>Lead Chief Investigator, cost-effective and secure data management in edge computing, University of Southern Queensland, Australia, 2022.</li>
-</ul>
-
-      <br>
-
-      <div style="pointer-events: none;">
-        <section id="analytics" class="analytics-section">
-
-          <!-- <h3>Website Analytics</h3> -->
-
-          <div class="stats-cards" style="display: none;">
-
-              <div class="card">
-                  <div class="label">Visitors</div>
-                  <div class="number" id="visitor">0</div>
-              </div>
-
-              <!-- <div class="card">
-                  <div class="number" id="pageview">Page Views</div>
-                  <div class="label">Page Views</div>
-              </div>
-
-              <div class="card">
-                  <div class="number" id="countryCount">Countries</div>
-                  <div class="label">Countries</div>
-              </div>
-
-            </div> -->
-
-            <div id="worldMap"></div>
-
-            <!-- <h4>Top Countries</h4> -->
-
-            <div id="countryList"></div>
-
-            <!-- <p id="updated"></p> -->
-
-        </section>
-
-        <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.css">
-
-        <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-
-        <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5/map/js/world.js"></script> -->
-
-        <script src="assets/analytics.js"></script>
-
-      </div>
-
-      <p></p><center><span>&copy; Xiaoyu Xia, 2026</span></center><p></p>
-
+        <div class="visitor-map__body">
+          <figure class="visitor-map__canvas" data-visitor-canvas></figure>
+          <ol class="visitor-map__ranking" data-visitor-ranking></ol>
+        </div>
       </section>
-      <footer>
+
+      <footer class="site-footer">
+        <p>&copy; Xiaoyu Xia, 2026</p>
       </footer>
-    </div>
 
-    <script src="./homepage_files/scale.fix.js"></script>
-    <script>
-      function toggleNews() {
-        var extra = document.getElementById('news-extra');
-        var btn = document.getElementById('newsToggle');
-        var txt = document.getElementById('newsToggleText');
-        var open = extra.classList.toggle('show');
-        btn.classList.toggle('expanded', open);
-        btn.setAttribute('aria-expanded', open);
-        txt.textContent = open ? 'Hide earlier news' : 'View earlier news';
-      }
-    </script>
+    </main>
+  </div>
 
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="./homepage_files/js"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <script src="./assets/js/visitor-map.js" defer></script>
+  <script src="./assets/js/site.js" defer></script>
 
-      gtag('config', 'G-73HCP89TG6');
-    </script>
 
-    <script src="assets/stats.js"></script>
+  <script src="./assets/js/theme.js" defer></script>
 
-  </body>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-73HCP89TG6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-73HCP89TG6');
+  </script>
+
+</body>
 </html>
