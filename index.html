@@ -37,14 +37,24 @@
 
   <nav class="topnav" aria-label="Main">
     <div class="topnav__inner">
-      <a class="topnav__brand" href="https://www.rmit.edu.au/" rel="noopener">
-        <img src="./homepage_files/RMIT-white.png" alt="RMIT University">
-      </a>
+      <div class="topnav__brands">
+        <a class="topnav__brand" href="https://www.rmit.edu.au/" rel="noopener">
+          <img src="./homepage_files/RMIT-white.png" alt="RMIT University">
+        </a>
+        <!-- SPARK-NAV
+        <a class="topnav__brand topnav__brand-spark" href="./spark.html">
+          <img src="./assets/brand/spark-nav.png" alt="SPARK Lab">
+        </a>
+        SPARK-NAV -->
+      </div>
       <div class="topnav__links">
         <a href="./index.html" aria-current="page">Home</a>
         <a href="./publications.html">Publications</a>
         <a href="./services.html">Services</a>
         <a href="./teaching.html">Teaching</a>
+        <!-- SPARK-NAV
+        <a href="./spark.html">SPARK<span class="nav-word"> Lab</span></a>
+        SPARK-NAV -->
         <button type="button" class="theme-toggle" id="themeToggle" hidden
                 aria-label="Switch colour theme" title="Switch colour theme">
           <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
@@ -180,18 +190,6 @@
 
       <section class="visitor-map" id="visitorMap" aria-labelledby="visitors" hidden>
         <h2 class="section-title" id="visitors">Visitors</h2>
-
-        <!-- <div class="visitor-map__summary">
-          <p class="visitor-map__stat">
-            <span class="visitor-map__figure" data-visitor-total>&mdash;</span>
-            <span class="visitor-map__caption">visitors</span>
-          </p>
-          <p class="visitor-map__stat">
-            <span class="visitor-map__figure" data-visitor-countries>&mdash;</span>
-            <span class="visitor-map__caption">countries &amp; regions</span>
-          </p>
-          <p class="visitor-map__note">Past 12 months, via Google Analytics. Updated daily.</p>
-        </div> -->
 
         <div class="visitor-map__body">
           <figure class="visitor-map__canvas" data-visitor-canvas></figure>

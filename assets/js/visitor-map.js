@@ -142,11 +142,6 @@
 
     var max = countries.length ? countries[0].value : 0;
 
-    root.querySelector('[data-visitor-total]').textContent =
-      Number(stats.visitors || 0).toLocaleString();
-    root.querySelector('[data-visitor-countries]').textContent =
-      countries.length.toLocaleString();
-
     root.querySelector('[data-visitor-canvas]').innerHTML = renderMap(world, countries, max);
     root.querySelector('[data-visitor-ranking]').innerHTML = renderRanking(countries, max);
 

@@ -24,6 +24,7 @@
   --link:           #1c6ea4;
   --link-hover:     #0d4b76;
   --heading:        #13294b;   /* headings & section titles */
+  --spark:          #0f3d1f;   /* SPARK Lab green */
   --icon:           #13294b;   /* social icons */
 
   /* Ink & surfaces */
@@ -93,6 +94,7 @@
     --link-hover: #85cbf0;
     --heading:    #56b6e6;
     --icon:       #56b6e6;
+    --spark:      #7fc08f;
 
     --ink:        #c9ccd3;
     --ink-strong: #eef0f4;
@@ -121,6 +123,7 @@
     --link-hover: #85cbf0;
     --heading:    #56b6e6;
     --icon:       #56b6e6;
+    --spark:      #7fc08f;
 
     --ink:        #c9ccd3;
     --ink-strong: #eef0f4;
@@ -248,9 +251,27 @@ code, pre { font-family: var(--font-mono); }
   gap: var(--space-4);
 }
 
+.topnav__brands {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
 .topnav__brand { display: inline-flex; align-items: center; }
 
 .topnav__brand img { width: 84px; display: block; }
+
+/* The SPARK mark sits beside the RMIT logo, separated by a hairline rule. */
+.topnav__brand-spark {
+  padding-left: var(--space-4);
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
+  opacity: 0.92;
+  transition: opacity 0.15s ease;
+}
+
+.topnav__brand-spark:hover { opacity: 1; }
+
+.topnav__brand-spark img { width: auto; height: 17px; }
 
 .topnav__links {
   display: flex;
@@ -260,6 +281,7 @@ code, pre { font-family: var(--font-mono); }
 
 .topnav__links a {
   color: rgba(255, 255, 255, 0.82);
+  white-space: nowrap;
   font-size: 1rem;
   line-height: 1;
   padding: var(--space-2) var(--space-3);
@@ -332,10 +354,26 @@ code, pre { font-family: var(--font-mono); }
 :root[data-theme="light"] .theme-toggle__icon--sun  { display: none; }
 :root[data-theme="light"] .theme-toggle__icon--moon { display: block; }
 
-@media (max-width: 560px) {
-  .topnav__brand { display: none; }
+/* Space gets tight once the SPARK Lab entry joins the links: drop the RMIT
+   logo first, then the SPARK mark, before the links themselves are squeezed. */
+@media (max-width: 1000px) {
+  .topnav__brand:not(.topnav__brand-spark) { display: none; }
+  .topnav__brand-spark { padding-left: 0; border-left: 0; }
+}
+
+@media (max-width: 700px) {
+  .topnav__brands { display: none; }
   .topnav__inner { justify-content: center; }
-  .topnav__links a { padding: var(--space-2); font-size: 0.95rem; }
+  .topnav__links a { padding: var(--space-2) var(--space-2); font-size: 0.95rem; }
+}
+
+@media (max-width: 560px) {
+  /* "SPARK Lab" is the first thing to give when the bar runs out of room. */
+  .nav-word { display: none; }
+}
+
+@media (max-width: 440px) {
+  .topnav__links a { padding: var(--space-2) 5px; font-size: 0.875rem; }
 }
 
 /* ==========================================================================
@@ -353,6 +391,15 @@ code, pre { font-family: var(--font-mono); }
 }
 
 .content { min-width: 0; }
+
+/*
+ * Pages that stand on their own — the SPARK Lab page — drop the profile
+ * sidebar. Narrower than the full 1120px so the prose keeps a sane measure.
+ */
+.wrapper--full {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 900px;
+}
 
 .content > :first-child { margin-top: 0; }
 
@@ -682,6 +729,220 @@ code, pre { font-family: var(--font-mono); }
 }
 
 /* ==========================================================================
+   7b. SPARK Lab page
+   ========================================================================== */
+
+.lab-hero {
+  margin-bottom: var(--space-7);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.lab-hero__logo {
+  display: block;
+  margin-bottom: var(--space-5);
+}
+
+.lab-hero__logo img {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+}
+
+.lab-hero__blurb {
+  margin: 0;
+  font-size: 1.09375rem;
+  max-width: 60ch;
+}
+
+/* Research themes ------------------------------------------------------- */
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+}
+
+.theme {
+  margin: 0;
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface-2);
+  border-radius: var(--radius-lg);
+  border-top: 3px solid var(--spark);
+}
+
+.theme__name {
+  margin: 0 0 var(--space-2);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--spark);
+}
+
+.theme p {
+  margin: 0;
+  font-size: 0.96875rem;
+}
+
+/* Members --------------------------------------------------------------- */
+
+.lab-lead {
+  margin: 0 0 var(--space-3);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+}
+
+.member {
+  margin: 0;
+  text-align: center;
+}
+
+/* The group lead reads better as one wide card than as a lone grid cell. */
+.member-grid--lead { grid-template-columns: minmax(0, 1fr); }
+
+.member-grid--lead .member {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-rows: repeat(4, auto);
+  align-content: center;
+  column-gap: var(--space-5);
+  text-align: left;
+  padding: var(--space-5);
+  background: var(--surface-2);
+  border-radius: var(--radius-lg);
+}
+
+.member-grid--lead .member__photo {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  align-self: center;
+  margin: 0;
+}
+
+.member-grid--lead .member__name,
+.member-grid--lead .member__role,
+.member-grid--lead .member__focus,
+.member-grid--lead .member__links { grid-column: 2; }
+
+.member-grid--lead .member__links { justify-content: flex-start; }
+
+@media (max-width: 560px) {
+  .member-grid--lead .member {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    text-align: center;
+    row-gap: var(--space-2);
+  }
+  .member-grid--lead .member__photo,
+  .member-grid--lead .member__name,
+  .member-grid--lead .member__role,
+  .member-grid--lead .member__focus,
+  .member-grid--lead .member__links {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .member-grid--lead .member__links { justify-content: center; }
+}
+
+.member__photo {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 0 auto var(--space-3);
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface-2);
+  box-shadow: var(--shadow-1);
+}
+
+.member__name {
+  margin: 0 0 2px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.member__name a { color: inherit; }
+.member__name a:hover { color: var(--link); }
+
+.member__role {
+  margin: 0 0 var(--space-2);
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+
+.member__focus {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.member__links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-2) 0 0;
+  font-size: 0.875rem;
+}
+
+/* Alumni ---------------------------------------------------------------- */
+
+.alumni-list {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+}
+
+.alumnus {
+  display: grid;
+  grid-template-columns: minmax(140px, auto) minmax(0, 1fr);
+  gap: 0 var(--space-4);
+  margin: 0;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.alumnus:last-child { border-bottom: 0; }
+
+.alumnus__name { font-weight: 600; color: var(--ink-strong); }
+
+.alumnus__detail { font-size: 0.96875rem; }
+
+.alumnus__next {
+  grid-column: 2;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+
+.alumnus--empty {
+  display: block;
+  color: var(--ink-muted);
+  border-bottom: 0;
+  padding-top: 0;
+}
+
+@media (max-width: 560px) {
+  .alumnus { grid-template-columns: minmax(0, 1fr); }
+  .alumnus__next { grid-column: 1; }
+}
+
+/* ==========================================================================
    8. Visitor map
    ========================================================================== */
 
@@ -707,33 +968,8 @@ code, pre { font-family: var(--font-mono); }
     --map-border: #1f212b;
 }
 
-.visitor-map__summary {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--space-2) var(--space-6);
-  margin-bottom: var(--space-4);
-}
-
-.visitor-map__stat {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-2);
-}
-
-.visitor-map__figure {
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1;
-  color: var(--ink-strong);
-  font-variant-numeric: tabular-nums;
-}
-
-.visitor-map__caption { color: var(--ink-muted); font-size: 0.9375rem; }
-
 .visitor-map__note {
-  flex: 1 1 100%;
-  margin: 0;
+  margin: 0 0 var(--space-4);
   color: var(--ink-muted);
   font-size: 0.875rem;
 }

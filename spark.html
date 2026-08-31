@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SPARK Lab — Xiaoyu (Shaw) Xia</title>
+  <meta name="description" content="SPARK is a research group at RMIT University led by Xiaoyu (Shaw) Xia, working on edge computing, distributed machine learning, and system security and privacy.">
+  <meta name="keywords" content="Xiaoyu Xia, Xia Xiaoyu, Shaw Xia, Xia Shaw, Xiaoyu (Shaw) Xia, RMIT University, edge computing, system security and privacy">
+  <meta name="author" content="Xiaoyu Xia">
+  <!-- TODO(Shaw): delete this line when the page goes live in the nav. -->
+  <meta name="robots" content="noindex">
+
+  <link rel="canonical" href="https://xiaoyushawxia.github.io/homepage/spark.html">
+  <link rel="icon" type="image/png" href="./homepage_files/RMIT_coa.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Ubuntu+Mono&amp;display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/site.css">
+
+  <script>
+    /* Applies a saved theme before first paint so there is no flash of the wrong palette. */
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (err) { /* storage blocked — fall back to the system preference */ }
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="topnav" aria-label="Main">
+    <div class="topnav__inner">
+      <div class="topnav__brands">
+        <a class="topnav__brand" href="https://www.rmit.edu.au/" rel="noopener">
+          <img src="./homepage_files/RMIT-white.png" alt="RMIT University">
+        </a>
+        <!-- SPARK-NAV
+        <a class="topnav__brand topnav__brand-spark" href="./spark.html">
+          <img src="./assets/brand/spark-nav.png" alt="SPARK Lab">
+        </a>
+        SPARK-NAV -->
+      </div>
+      <div class="topnav__links">
+        <a href="./index.html">Home</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./services.html">Services</a>
+        <a href="./teaching.html">Teaching</a>
+        <!-- SPARK-NAV
+        <a href="./spark.html" aria-current="page">SPARK<span class="nav-word"> Lab</span></a>
+        SPARK-NAV -->
+        <button type="button" class="theme-toggle" id="themeToggle" hidden
+                aria-label="Switch colour theme" title="Switch colour theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2.6v2.2M12 19.2v2.2M4.2 12H2M22 12h-2.2M6.3 6.3 4.8 4.8M19.2 19.2l-1.5-1.5M17.7 6.3l1.5-1.5M4.8 19.2l1.5-1.5"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrapper wrapper--full">
+
+
+    <main class="content" id="main">
+
+      <header class="lab-hero">
+        <picture class="lab-hero__logo">
+          <source srcset="./assets/brand/spark-logo-light.png" media="(prefers-color-scheme: dark)">
+          <img src="./assets/brand/spark-logo.png" alt="SPARK Lab — Edge · AI · Security" width="784" height="266">
+        </picture>
+        <p class="lab-hero__blurb">
+          SPARK is a research group at the
+          <a href="https://www.rmit.edu.au/" rel="noopener">School of Computing Technologies, RMIT University</a>,
+          led by <a href="./index.html">Xiaoyu (Shaw) Xia</a>. We build distributed systems that stay
+          efficient and trustworthy once intelligence moves out of the data centre and onto the edge.
+        </p>
+      </header>
+
+      <h2 class="section-title" id="research">Research</h2>
+
+      <!-- TODO(Shaw): reword these three themes however you like. -->
+      <ul class="theme-grid">
+        <li class="theme">
+          <h3 class="theme__name">Edge</h3>
+          <p>Resource allocation, data placement and migration across edge infrastructure — keeping
+          latency, cost and energy in balance as demand shifts.</p>
+        </li>
+        <li class="theme">
+          <h3 class="theme__name">AI</h3>
+          <p>Federated and collaborative learning on constrained devices, retrieval-augmented systems,
+          and machine unlearning where compute and bandwidth are scarce.</p>
+        </li>
+        <li class="theme">
+          <h3 class="theme__name">Security</h3>
+          <p>Privacy-preserving computation, attack and defence in edge caching and serving systems,
+          and the security of the systems that host machine learning.</p>
+        </li>
+      </ul>
+
+      <h2 class="section-title" id="join">Join us</h2>
+
+      <div class="callout">
+        <p>
+          <strong>We are actively looking for self-motivated Ph.D. students</strong> with interests in
+          system security and privacy, and distributed ML systems. If you are interested, please email
+          <a href="mailto:xiaoyu.xia@rmit.edu.au">xiaoyu.xia@rmit.edu.au</a> with your
+          <strong class="alert">CV, transcript and research experience</strong>
+          (e.g. minor thesis, publications) at any time.
+          <strong class="venue">Visiting scholars and students</strong> as well as
+          <strong class="venue">industry partners</strong> are welcome.
+        </p>
+      </div>
+
+      <h2 class="section-title" id="members">Members</h2>
+
+      <p class="lab-lead">Group lead</p>
+
+      <ul class="member-grid member-grid--lead">
+        <li class="member">
+          <img class="member__photo" src="./homepage_files/xiaoyu_xia_square.jpeg" alt="" loading="lazy">
+          <h3 class="member__name"><a href="./index.html">Xiaoyu (Shaw) Xia</a></h3>
+          <p class="member__role">Senior Lecturer</p>
+          <p class="member__focus">System security and privacy, distributed systems, edge computing</p>
+          <p class="member__links">
+            <a href="https://scholar.google.com.au/citations?hl=en&amp;user=v-6hODoAAAAJ" rel="noopener">Scholar</a>
+            <a href="mailto:xiaoyu.xia@rmit.edu.au">Email</a>
+          </p>
+        </li>
+      </ul>
+
+      <p class="lab-lead">Students</p>
+
+      <!--
+        TODO(Shaw): every member below is a placeholder. For each one, set
+          member__role   e.g. "PhD Student, 2023–" / "Research Master" / "Research Assistant"
+          member__focus  their topic in a few words
+          member__links  add Scholar / homepage / GitHub links as they appear
+        Photos: replace assets/team/<slug>.png with a square photo of the same name.
+      -->
+      <ul class="member-grid">
+        <li class="member">
+          <img class="member__photo" src="./assets/team/ziqi-wang.png" alt="" loading="lazy">
+          <h3 class="member__name"><a href="https://ziqiwang.com.au/" rel="noopener">Ziqi Wang</a></h3>
+          <p class="member__role">PhD Student</p>
+          <p class="member__focus">Green edge resource control, privacy-preserving edge systems</p>
+          <p class="member__links">
+            <a href="https://ziqiwang.com.au/" rel="noopener">Homepage</a>
+          </p>
+        </li>
+
+        <li class="member">
+          <img class="member__photo" src="./assets/team/mengsha-kou.png" alt="" loading="lazy">
+          <h3 class="member__name"><a href="https://scholar.google.com.au/citations?hl=en&amp;user=otnC8zsAAAAJ" rel="noopener">Mengsha Kou</a></h3>
+          <p class="member__role">PhD Student</p>
+          <p class="member__focus">Attacks and defences in web edge caching, federated fine-tuning</p>
+          <p class="member__links">
+            <a href="https://scholar.google.com.au/citations?hl=en&amp;user=otnC8zsAAAAJ" rel="noopener">Scholar</a>
+          </p>
+        </li>
+
+        <li class="member">
+          <img class="member__photo" src="./assets/team/jian-tang.png" alt="" loading="lazy">
+          <h3 class="member__name">Jian Tang</h3>
+          <p class="member__role">PhD Student</p>
+          <p class="member__focus">TODO: research topic</p>
+        </li>
+
+        <li class="member">
+          <img class="member__photo" src="./assets/team/mengying-zhang.png" alt="" loading="lazy">
+          <h3 class="member__name">Mengying Zhang</h3>
+          <p class="member__role">PhD Student</p>
+          <p class="member__focus">TODO: research topic</p>
+        </li>
+
+        <li class="member">
+          <img class="member__photo" src="./assets/team/liuyue-yin.png" alt="" loading="lazy">
+          <h3 class="member__name">Liuyue Yin</h3>
+          <p class="member__role">PhD Student</p>
+          <p class="member__focus">TODO: research topic</p>
+        </li>
+      </ul>
+
+      <h2 class="section-title" id="alumni">Alumni</h2>
+
+      <!--
+        TODO(Shaw): add one row per alumnus. Suggested shape —
+          name, what they did here, and where they went next.
+
+        <li class="alumnus">
+          <span class="alumnus__name">Full Name</span>
+          <span class="alumnus__detail">PhD 2027 &middot; thesis topic in a few words</span>
+          <span class="alumnus__next">Now: Postdoc, Some University</span>
+        </li>
+      -->
+      <ul class="alumni-list">
+        <li class="alumnus alumnus--empty">Alumni will be listed here as students graduate.</li>
+      </ul>
+
+      <footer class="site-footer">
+        <p>&copy; Xiaoyu Xia, 2026</p>
+      </footer>
+
+    </main>
+  </div>
+
+
+  <script src="./assets/js/theme.js" defer></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F05BQXBV2R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-F05BQXBV2R');
+  </script>
+
+</body>
+</html>
