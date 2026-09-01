@@ -1,13 +1,13 @@
 {
-  "visitors": 160,
+  "visitors": 165,
   "countries": [
     {
       "name": "Australia",
-      "value": 71
+      "value": 75
     },
     {
       "name": "China",
-      "value": 23
+      "value": 24
     },
     {
       "name": "United States",
@@ -40,6 +40,58 @@
     {
       "name": "Malaysia",
       "value": 3
+    },
+    {
+      "name": "Argentina",
+      "value": 2
+    },
+    {
+      "name": "France",
+      "value": 2
+    },
+    {
+      "name": "Pakistan",
+      "value": 2
+    },
+    {
+      "name": "Vietnam",
+      "value": 2
+    },
+    {
+      "name": "Cyprus",
+      "value": 1
+    },
+    {
+      "name": "Germany",
+      "value": 1
+    },
+    {
+      "name": "Iran",
+      "value": 1
+    },
+    {
+      "name": "Ireland",
+      "value": 1
+    },
+    {
+      "name": "Macao",
+      "value": 1
+    },
+    {
+      "name": "Netherlands",
+      "value": 1
+    },
+    {
+      "name": "South Korea",
+      "value": 1
+    },
+    {
+      "name": "United Arab Emirates",
+      "value": 1
+    },
+    {
+      "name": "United Kingdom",
+      "value": 1
     }
   ]
 }
