@@ -546,7 +546,17 @@ code, pre { font-family: var(--font-mono); }
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 
-.callout p:last-child { margin-bottom: 0; }
+.callout > :last-child { margin-bottom: 0; }
+
+.callout__lead { margin-bottom: var(--space-2); }
+
+.callout__list {
+  margin: 0 0 var(--space-4);
+  padding-left: 1.4em;
+}
+
+.callout__list li { margin-bottom: var(--space-2); }
+.callout__list li::marker { color: var(--ink-muted); font-weight: 600; }
 
 /* Inline semantic accents (replace former inline colour styles) */
 .venue  { color: var(--venue); }
