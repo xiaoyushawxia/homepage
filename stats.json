@@ -1,13 +1,13 @@
 {
-  "visitors": 196,
+  "visitors": 202,
   "countries": [
     {
       "name": "Australia",
-      "value": 88
+      "value": 90
     },
     {
       "name": "China",
-      "value": 32
+      "value": 35
     },
     {
       "name": "United States",
@@ -23,7 +23,7 @@
     },
     {
       "name": "Japan",
-      "value": 7
+      "value": 8
     },
     {
       "name": "Taiwan",
