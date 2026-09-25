@@ -906,6 +906,12 @@ code, pre { font-family: var(--font-mono); }
   color: var(--heading);
 }
 
+.page-theme__span {
+  margin: var(--space-1) 0 0;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+
 .pillar-title {
   font-size: 1.25rem;
   letter-spacing: 0.04em;
