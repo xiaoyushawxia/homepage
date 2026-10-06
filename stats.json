@@ -1,5 +1,5 @@
 {
-  "visitors": 242,
+  "visitors": 245,
   "countries": [
     {
       "name": "Australia",
@@ -7,11 +7,11 @@
     },
     {
       "name": "China",
-      "value": 43
+      "value": 44
     },
     {
       "name": "United States",
-      "value": 27
+      "value": 28
     },
     {
       "name": "Singapore",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Taiwan",
-      "value": 7
+      "value": 8
     },
     {
       "name": "Vietnam",
