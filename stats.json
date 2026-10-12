@@ -1,21 +1,21 @@
 {
-  "visitors": 237,
+  "visitors": 261,
   "countries": [
     {
       "name": "Australia",
-      "value": 101
+      "value": 110
     },
     {
       "name": "China",
-      "value": 43
+      "value": 46
     },
     {
       "name": "United States",
-      "value": 27
+      "value": 31
     },
     {
       "name": "Singapore",
-      "value": 21
+      "value": 22
     },
     {
       "name": "Hong Kong",
@@ -23,26 +23,30 @@
     },
     {
       "name": "Japan",
-      "value": 8
+      "value": 9
     },
     {
       "name": "Taiwan",
-      "value": 7
+      "value": 8
+    },
+    {
+      "name": "Bangladesh",
+      "value": 5
+    },
+    {
+      "name": "Vietnam",
+      "value": 5
     },
     {
       "name": "India",
       "value": 4
     },
     {
-      "name": "Bangladesh",
+      "name": "Germany",
       "value": 3
     },
     {
       "name": "Malaysia",
-      "value": 3
-    },
-    {
-      "name": "Vietnam",
       "value": 3
     },
     {
@@ -63,10 +67,6 @@
     },
     {
       "name": "Cyprus",
-      "value": 1
-    },
-    {
-      "name": "Germany",
       "value": 1
     },
     {
