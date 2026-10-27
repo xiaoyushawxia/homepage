@@ -1,17 +1,17 @@
 {
-  "visitors": 293,
+  "visitors": 301,
   "countries": [
     {
       "name": "Australia",
-      "value": 116
+      "value": 117
     },
     {
       "name": "China",
-      "value": 53
+      "value": 54
     },
     {
       "name": "United States",
-      "value": 39
+      "value": 41
     },
     {
       "name": "Singapore",
@@ -19,15 +19,15 @@
     },
     {
       "name": "Hong Kong",
-      "value": 12
+      "value": 13
     },
     {
       "name": "Japan",
-      "value": 12
+      "value": 13
     },
     {
       "name": "Taiwan",
-      "value": 8
+      "value": 9
     },
     {
       "name": "Bangladesh",
@@ -75,6 +75,10 @@
     },
     {
       "name": "Cyprus",
+      "value": 1
+    },
+    {
+      "name": "Hungary",
       "value": 1
     },
     {
